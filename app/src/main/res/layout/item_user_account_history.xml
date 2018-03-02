@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_account_history"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_user_item_pressed"
+        android:gravity="center_vertical"
+        android:paddingLeft="65dp"
+        android:paddingRight="65dp"
+        android:text="@string/app_name"
+        android:textColor="@color/c_secondary_text"
+        android:textSize="@dimen/site_title_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/c_divider" />
+
+</LinearLayout>

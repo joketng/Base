@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_divider_block"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/v_base_top_bar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="50dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <include layout="@layout/v_base_divider_line" />
+
+    <include layout="@layout/v_user_input_phone" />
+
+    <include
+        android:id="@+id/divider_line_anchor"
+        layout="@layout/v_base_divider_line" />
+
+    <include layout="@layout/v_base_divider_bar" />
+
+    <include layout="@layout/v_base_divider_line" />
+
+    <include layout="@layout/v_user_input_password" />
+
+    <include layout="@layout/v_base_divider_line" />
+
+    <include layout="@layout/v_base_divider_bar" />
+
+    <include layout="@layout/v_user_button_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/page_margin_left"
+            android:layout_marginStart="@dimen/page_margin_left"
+            android:padding="@dimen/default_padding"
+            android:text="@string/new_register"
+            android:textColor="@color/c_main_blue" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_find_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/page_margin_right"
+            android:layout_marginRight="@dimen/page_margin_right"
+            android:padding="@dimen/default_padding"
+            android:text="@string/find_password"
+            android:textColor="@color/c_main_blue" />
+    </LinearLayout>
+</LinearLayout>

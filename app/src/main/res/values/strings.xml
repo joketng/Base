@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">智慧消防</string>
+
+
+    <string name="text_medical_history">病史</string>
+    <string name="text_mine">我的</string>
+
+    <string name="mobile_number">手机号</string>
+    <string name="prompt_mobile">请输入手机号</string>
+    <string name="password">密码</string>
+    <string name="prompt_password">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="new_register">新用户注册</string>
+    <string name="find_password">找回密码</string>
+    <string name="identify_code">验证码</string>
+    <string name="prompt_identify_code">请输入验证码</string>
+    <string name="password_regular">密码由6–20位英文字母、数字或符号组成</string>
+    <string name="gain">获取</string>
+    <string name="prompt_login_mobile">请输入手机号</string>
+    <string name="invalid_mobile">无效手机号</string>
+    <string name="invalid_password">密码不符合规则</string>
+    <string name="go_register">去注册</string>
+    <string name="complete">完成</string>
+    <string name="register_free">免费注册</string>
+    <string name="register_immediately">立即注册</string>
+    <string name="gaining">获取中</string>
+    <string name="invalid_identify_code">验证码不符合规则</string>
+    <string name="account_exit">该手机号已注册</string>
+    <string name="go_login">去登录</string>
+    <string name="account_no_exit">账户不存在</string>
+    <string name="identify_code_error">验证码错误,请重新输入</string>
+    <string name="identify_code_past">验证码已过期,重新获取</string>
+    <string name="account_exit_website">该手机已注册,可直接登录</string>
+    <string name="gain_identify_code_failure">验证码发送失败,请重新获取</string>
+
+
+</resources>
