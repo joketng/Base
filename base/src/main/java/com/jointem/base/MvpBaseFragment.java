@@ -7,12 +7,9 @@ import android.view.View;
 import com.jointem.base.iView.IView;
 import com.jointem.base.presenter.BasePresenter;
 
-import butterknife.Unbinder;
-
 public abstract class MvpBaseFragment<V extends IView, T extends BasePresenter<V>> extends BaseFragment {
     protected T mPresenter;  // Presenter对象
     protected V iView;
-    private Unbinder mBind;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

@@ -16,10 +16,7 @@ import com.jointem.fire.fragment.MineFragment;
 import com.jointem.fire.fragment.WorkbenchFragment;
 import com.jointem.plugin.request.RetrofitClient;
 
-import butterknife.BindView;
-
 public class MainActivity extends BaseActivity {
-    @BindView(android.R.id.tabhost)
     FragmentTabHost fragmentTabHost;
 
     // Tab选项卡的文字
@@ -55,6 +52,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initWidget() {
         super.initWidget();
+        fragmentTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         fragmentTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         fragmentTabHost.setBackgroundColor(ContextCompat.getColor(this, R.color.outbody_bottom_color));
         fragmentTabHost.getTabWidget().setDividerDrawable(null);// 隐藏分割线

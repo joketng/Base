@@ -2,7 +2,6 @@ package com.jointem.fire;
 
 import android.content.Context;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.jointem.base.BaseApplication;
 import com.jointem.fire.bean.LocateCity;
 import com.jointem.fire.utils.LocationWrap;
@@ -14,7 +13,7 @@ import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
 
 
-public class FireApplication extends BaseApplication {
+public class WYCApplication extends BaseApplication {
     private static Context applicationContext;
     public static LocateCity locateCity;// 当前定位到的城市
 
@@ -23,7 +22,7 @@ public class FireApplication extends BaseApplication {
         super.onCreate();
         applicationContext = this.getApplicationContext();
         LocationWrap.getInstance();
-        SDKInitializer.initialize(getApplicationContext());
+//        SDKInitializer.initialize(getApplicationContext());
         initLog();
         RetrofitClient.initContext(getContextFromApplication(), !GetInterfaceConfig.isReleaseEnvironment);
 

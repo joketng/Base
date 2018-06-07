@@ -16,7 +16,7 @@ import com.jointem.base.util.IntentUtil;
 import com.jointem.base.util.SystemTool;
 import com.jointem.plugin.request.util.GsonUtils;
 import com.jointem.fire.R;
-import com.jointem.fire.FireApplication;
+import com.jointem.fire.WYCApplication;
 import com.jointem.fire.activity.MainActivity;
 import com.jointem.fire.h5.CallBack4H5;
 import com.jointem.fire.h5.ant.JCallBack;
@@ -43,14 +43,14 @@ public class common_native {
 
     public static void getAppLocation(@JContext Context context, @Param("realTime") String realTime, @JCallBack final CallBack4H5 callBack4H5) {
         final BaseActivity baseActivity = (BaseActivity) context;
-        if (FireApplication.locateCity != null) {
+        if (WYCApplication.locateCity != null) {
             if (TextUtils.equals(realTime, "0")) {
                 callBack4H5.onSuccess(buildAppLocationJsonStr(true));
             } else if (TextUtils.equals(realTime, "1")) {
                 LocationWrap.getInstance().setOnLocationFinishListener(new LocationWrap.OnLocationFinishListener() {
                     @Override
                     public void locationFinish() {
-                        if (FireApplication.locateCity != null) {
+                        if (WYCApplication.locateCity != null) {
                             callBack4H5.onSuccess(buildAppLocationJsonStr(true));
                         } else {
                             callBack4H5.onFailed(buildAppLocationJsonStr(false));
@@ -70,7 +70,7 @@ public class common_native {
                                 LocationWrap.getInstance().setOnLocationFinishListener(new LocationWrap.OnLocationFinishListener() {
                                     @Override
                                     public void locationFinish() {
-                                        if (FireApplication.locateCity != null) {
+                                        if (WYCApplication.locateCity != null) {
                                             callBack4H5.onSuccess(buildAppLocationJsonStr(true));
                                         } else {
                                             callBack4H5.onFailed(buildAppLocationJsonStr(false));
@@ -155,13 +155,13 @@ public class common_native {
     private static String buildAppLocationJsonStr(boolean isSuccess) {
         if (isSuccess) {
             Map<String, String> map = new HashMap<>();
-            map.put("longitude", String.valueOf(FireApplication.locateCity.getLongitude()));
-            map.put("latitude", String.valueOf(FireApplication.locateCity.getLatitude()));
-            map.put("addressName", FireApplication.locateCity.getAddress());
-            map.put("province", FireApplication.locateCity.getProvince());
-            map.put("city", FireApplication.locateCity.getCityName());
-            map.put("county", FireApplication.locateCity.getCountyName());
-            map.put("street", FireApplication.locateCity.getStreet());
+            map.put("longitude", String.valueOf(WYCApplication.locateCity.getLongitude()));
+            map.put("latitude", String.valueOf(WYCApplication.locateCity.getLatitude()));
+            map.put("addressName", WYCApplication.locateCity.getAddress());
+            map.put("province", WYCApplication.locateCity.getProvince());
+            map.put("city", WYCApplication.locateCity.getCityName());
+            map.put("county", WYCApplication.locateCity.getCountyName());
+            map.put("street", WYCApplication.locateCity.getStreet());
             return GsonUtils.getInstance().toJsonString(map);
         } else {
             return null;

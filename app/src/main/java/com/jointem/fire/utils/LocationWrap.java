@@ -5,7 +5,7 @@ import android.content.Context;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.jointem.baidu_lbs.LocationServiceUtil;
-import com.jointem.fire.FireApplication;
+import com.jointem.fire.WYCApplication;
 import com.jointem.fire.bean.LocateCity;
 
 
@@ -26,8 +26,8 @@ public class LocationWrap {
 
     public static LocationWrap getInstance() {
         if (null == locationWrap) {
-            locationWrap = new LocationWrap(FireApplication.getContextFromApplication());
-            locationServiceUtil = new LocationServiceUtil(FireApplication.getContextFromApplication());
+            locationWrap = new LocationWrap(WYCApplication.getContextFromApplication());
+            locationServiceUtil = new LocationServiceUtil(WYCApplication.getContextFromApplication());
         }
         return locationWrap;
     }

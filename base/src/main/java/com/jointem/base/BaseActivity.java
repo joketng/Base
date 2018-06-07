@@ -26,6 +26,7 @@ public class BaseActivity extends SwipeBackActivity implements I_initializer, Vi
     public final BehaviorProcessor<Integer> lifecycleSubject = BehaviorProcessor.create();
     private Unbinder mBind;
 
+
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
         // 隐藏标题栏

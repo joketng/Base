@@ -17,17 +17,17 @@ import kotlinx.android.synthetic.main.item_home.view.*
  */
 class HomeAdapter(context: Context, itemList: List<String>) : BaseRecyclerAdapter<String, HomeAdapter.MyViewHolder>(context, itemList) {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(layoutInflater.inflate(R.layout.item_home, parent, false))
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
-        holder!!.textView.text = itemList[position]
+        holder.textView.text = itemList[position]
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        lateinit var textView: TextView
+        var textView: TextView
         init {
             UiUtil.setItemBg(itemView)
             textView = itemView.tv_test
